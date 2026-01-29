@@ -98,7 +98,7 @@ const Hero = () => {
         >
           <div className="profile-photo-container">
             <motion.img
-              src="/doh-lah.jpeg"
+              src={`${process.env.PUBLIC_URL}/doh-lah.jpeg`}
               alt="Doh Lah Nundo Christian"
               className="profile-photo"
               onClick={() => setImageEnlarged(true)}
@@ -205,7 +205,7 @@ const Hero = () => {
               <FaTimes />
             </button>
             <img
-              src="/doh-lah.jpeg"
+              src={`${process.env.PUBLIC_URL}/doh-lah.jpeg`}
               alt="Doh Lah Nundo Christian - Enlarged"
               className="modal-image"
             />

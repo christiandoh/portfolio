@@ -20,7 +20,7 @@ const Projects = () => {
       category: 'web',
       description: 'Built a full online store that handles real customer orders. Features a smooth checkout, inventory tracking, and payment processing. Started small, scaled it up to handle peak traffic.',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: '/projet1.jpeg',
+      image: `${process.env.PUBLIC_URL}/projet1.jpeg`,
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
       category: 'mobile',
       description: 'Created a music streaming app where users can browse, play, and create playlists. Built with performance in mind to handle large music libraries without lag.',
       technologies: ['React Native', 'Firebase', 'Redux'],
-      image: '/musicapp.jpeg',
+      image: `${process.env.PUBLIC_URL}/musicapp.jpeg`,
       gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     },
     {
@@ -37,8 +37,8 @@ const Projects = () => {
       title: 'Management Dashboard',
       category: 'web',
       description: 'Designed and built a tool for teams to track their work in real-time. Shows what\'s done, what\'s pending, and who\'s doing what. Helps managers see the big picture without micromanaging.',
-      technologies: ['React', 'D3.js', 'WebSocket', 'Express'],
-      image: '/managment.jpeg',
+      technologies: ['flutter', 'D3.js', 'WebSocket', 'Express'],
+      image: `${process.env.PUBLIC_URL}/managment.jpeg`,
       gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     },
     {
@@ -46,8 +46,8 @@ const Projects = () => {
       title: 'Download Manager',
       category: 'mobile',
       description: 'Built an app that lets users download, organize, and manage files on the go. Handles large files, pause/resume, and organizes everything into folders.',
-      technologies: ['React Native', 'Google Maps API', 'Node.js'],
-      image: '/téléchargement.jpeg',
+      technologies: ['flutter', 'Google Maps API', 'Node.js'],
+      image: `${process.env.PUBLIC_URL}/téléchargement.jpeg`,
       gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
     },
     {
@@ -56,7 +56,7 @@ const Projects = () => {
       category: 'fullstack',
       description: 'Developed a platform where professionals connect and share ideas. Built messaging, notifications, and a news feed. Focused on privacy and meaningful interactions over clutter.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Socket.io'],
-      image: '/socialeapp.jpeg',
+      image: `${process.env.PUBLIC_URL}/socialeapp.jpeg`,
       gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     },
     {
@@ -64,8 +64,8 @@ const Projects = () => {
       title: 'Fintech Platform',
       category: 'fullstack',
       description: 'Built a financial app for managing transactions and investments. Secure, fast, and designed to make money management feel effortless. Real-time updates and clear insights into spending.',
-      technologies: ['React', 'Express', 'MongoDB', 'AWS S3'],
-      image: '/fintechapp.jpeg',
+      technologies: ['flutter', 'Express', 'MongoDB', 'AWS S3'],
+      image: `${process.env.PUBLIC_URL}/fintechapp.jpeg`,
       gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
     },
   ];
@@ -183,7 +183,7 @@ const Projects = () => {
         {/* Portfolio Owner Photo */}
         <div className="portfolio-owner">
           <img 
-            src="/doh-lah.jpeg" 
+            src={`${process.env.PUBLIC_URL}/doh-lah.jpeg`}
             alt="Portfolio Owner" 
             className="owner-photo"
           />
