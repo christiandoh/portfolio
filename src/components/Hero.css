@@ -98,14 +98,24 @@
   position: relative;
   height: 500px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 30px;
+}
+
+.profile-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 2;
 }
 
 .visual-container {
   position: relative;
   width: 400px;
   height: 400px;
+  order: 1;
 }
 
 .center-circle {
@@ -305,12 +315,20 @@
 
   .hero-visual {
     height: auto;
-    min-height: 250px;
+    min-height: auto;
+    flex-direction: column-reverse;
+    gap: 20px;
   }
 
   .visual-container {
     width: 220px;
     height: 220px;
+    order: 2;
+  }
+
+  .profile-photo-container {
+    order: 1;
+    margin-bottom: 0;
   }
 
   .floating-card {
