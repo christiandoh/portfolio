@@ -52,19 +52,23 @@ const Navbar = () => {
           {navigationItems.map((item, index) => {
             const IconComponent = item.icon;
             return (
-              <motion.a
+              <motion.button
                 key={item.label}
-                onClick={() => scrollToSection(item.label === 'Home' ? 'hero' : item.id)}
+                onClick={() => {
+                  scrollToSection(item.label === 'Home' ? 'hero' : item.id);
+                  setMenuOpen(false);
+                }}
                 className="nav-link"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -2 }}
                 title={item.label}
+                type="button"
               >
                 <IconComponent className="nav-icon" />
                 <span className="nav-text">{item.label}</span>
-              </motion.a>
+              </motion.button>
             );
           })}
         </div>

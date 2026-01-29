@@ -36,7 +36,7 @@ const Projects = () => {
       id: 3,
       title: 'Management Dashboard',
       category: 'web',
-      description: 'Designed and built a tool for teams to track their work in real-time. Shows what\'s done, what\'s pending, and who\'s doing what. Helps managers see the big picture without micromanaging.',
+      description: 'Designed and built a tool for teams to track their work in real-time. Shows what is done, what is pending, and who is doing what. Helps managers see the big picture without micromanaging.',
       technologies: ['flutter', 'D3.js', 'WebSocket', 'Express'],
       image: `${process.env.PUBLIC_URL}/managment.jpeg`,
       gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
@@ -166,13 +166,7 @@ const Projects = () => {
                     >
                       View Details
                     </motion.button>
-                    <motion.button
-                      className="project-btn secondary"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Source Code
-                    </motion.button>
+                    
                   </div>
                 </div>
               </motion.div>
