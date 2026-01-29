@@ -1,0 +1,465 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 120px 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.role {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.role-text {
+  color: var(--text-secondary);
+}
+
+.role-highlight {
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary-bg);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--text-primary);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+/* Hero Visual */
+.hero-visual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-card {
+  position: absolute;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-icon {
+  font-size: 2rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-1 {
+  top: 15%;
+  left: 5%;
+}
+
+.card-2 {
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+
+.card-3 {
+  bottom: 15%;
+  left: 5%;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 4% 60px 4%;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .name {
+    font-size: 3.5rem;
+  }
+
+  .role {
+    font-size: 1.8rem;
+  }
+
+  .hero-visual {
+    height: 350px;
+  }
+
+  .visual-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .center-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .floating-card {
+    padding: 15px 20px;
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .profile-photo {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 4% 60px 4%;
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .role {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .hero-visual {
+    height: auto;
+    min-height: 250px;
+  }
+
+  .visual-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .floating-card {
+    padding: 12px 15px;
+  }
+
+  .card-content {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .card-icon {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .center-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-photo-container {
+    margin-bottom: 20px;
+  }
+
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    border: 2px solid var(--accent);
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 11px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 3% 50px 3%;
+  }
+
+  .hero-content {
+    gap: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .role {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+  }
+
+  .visual-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .floating-card {
+    padding: 10px 12px;
+  }
+
+  .card-icon {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.65rem;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Profile Photo Styles */
+.profile-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100px;
+  border: 3px solid var(--accent);
+  box-shadow: 0 10px 40px rgba(100, 200, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 50px rgba(100, 200, 255, 0.5);
+}
+
+/* Image Modal Styles */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(100, 200, 255, 0.4);
+}
+
+.modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+.modal-close:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
