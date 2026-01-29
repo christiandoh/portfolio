@@ -93,7 +93,7 @@ const About = () => {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                <span className="counter">des</span>
+                <span className="counter">some</span>
               </motion.div>
               <div className="stat-label">Satisfied Customers</div>
             </div>
