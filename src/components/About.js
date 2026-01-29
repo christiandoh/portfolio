@@ -71,7 +71,7 @@ const About = () => {
               >
                 <span className="counter">4+</span>
               </motion.div>
-              <div className="stat-label">Années d'Expérience</div>
+              <div className="stat-label">Years of Experience</div>
             </div>
 
             <div className="stat-card glass">
@@ -81,9 +81,9 @@ const About = () => {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <span className="counter">50+</span>
+                <span className="counter">10+</span>
               </motion.div>
-              <div className="stat-label">Projets Complétés</div>
+              <div className="stat-label">Projects Completed</div>
             </div>
 
             <div className="stat-card glass">
@@ -93,9 +93,9 @@ const About = () => {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                <span className="counter">30+</span>
+                <span className="counter">des</span>
               </motion.div>
-              <div className="stat-label">Clients Satisfaits</div>
+              <div className="stat-label">Satisfied Customers</div>
             </div>
           </motion.div>
         </div>
