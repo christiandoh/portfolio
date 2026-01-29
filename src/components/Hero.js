@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaMobileAlt, FaRocket, FaTimes } from 'react-icons/fa';
+import { FaReact, FaMobileAlt, FaRocket, FaTimes, FaEnvelope, FaFolderOpen } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
@@ -75,14 +75,17 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <button className="btn btn-primary" onClick={scrollToContact}>
-              Contact Me
+            <button className="btn btn-primary" onClick={scrollToContact} title="Contact Me">
+              <span className="btn-icon"><FaEnvelope /></span>
+              <span className="btn-text">Contact Me</span>
             </button>
             <button
               className="btn btn-secondary"
               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
+              title="View Projects"
             >
-              View Projects
+              <span className="btn-icon"><FaFolderOpen /></span>
+              <span className="btn-text">View Projects</span>
             </button>
           </motion.div>
         </motion.div>
