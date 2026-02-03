@@ -37,7 +37,7 @@ function App() {
                 repeat: Infinity,
               }}
             >
-              <span>Demeures Benis !!!🙏</span>
+              <span>Be Blessed !!!🙏</span>
               <span className="loader-dot">.</span>
             </motion.div>
           </motion.div>
