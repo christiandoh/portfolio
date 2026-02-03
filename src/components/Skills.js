@@ -57,7 +57,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="competences" className="skills" ref={ref}>
+    <section id="skills" className="skills" ref={ref}>
       <div className="skills-container">
         <motion.h2
           className="section-title"
