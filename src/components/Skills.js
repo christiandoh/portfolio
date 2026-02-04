@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaReact, FaMobileAlt, FaSquare, FaPalette, FaWind, FaNode, FaLightbulb, FaPython, FaLeaf, FaDatabase, FaFire, FaGitAlt, FaDocker, FaCode, FaEnvelope, FaCloud, FaCog, FaTools } from 'react-icons/fa';
+import { SiFlutter } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
@@ -14,6 +15,7 @@ const Skills = () => {
     frontend: [
       { name: 'React', level: 95, icon: <FaReact /> },
       { name: 'React Native', level: 90, icon: <FaMobileAlt /> },
+      { name: 'Flutter', level: 88, icon: <SiFlutter /> },
       { name: 'JavaScript', level: 95, icon: <FaSquare /> },
       { name: 'TypeScript', level: 85, icon: <FaSquare /> },
       { name: 'HTML/CSS', level: 98, icon: <FaPalette /> },
