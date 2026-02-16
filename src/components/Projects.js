@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaGithub } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
@@ -16,57 +16,53 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Portfolio (React)',
       category: 'web',
-      description: 'Built a full online store that handles real customer orders. Features a smooth checkout, inventory tracking, and payment processing. Started small, scaled it up to handle peak traffic.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: `${process.env.PUBLIC_URL}/projet1.jpeg`,
+      description: 'Mon portfolio personnel construit avec React : présentations, compétences, projets et formulaire de contact. Design moderne avec Framer Motion et thème glassmorphism.',
+      technologies: ['React', 'CSS', 'Framer Motion', 'GitHub Pages'],
+      image: 'https://placehold.co/600x400/1a1a2e/64c8ff?text=Portfolio',
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      repoUrl: 'https://github.com/christiandoh/portfolio',
     },
     {
       id: 2,
-      title: 'Music App',
-      category: 'mobile',
-      description: 'Created a music streaming app where users can browse, play, and create playlists. Built with performance in mind to handle large music libraries without lag.',
-      technologies: ['React Native', 'Firebase', 'Redux'],
-      image: `${process.env.PUBLIC_URL}/musicapp.jpeg`,
-      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      title: 'Ahaouah Projet',
+      category: 'web',
+      description: 'Projet portfolio ou site vitrine. Interface soignée et mise en page responsive avec CSS moderne.',
+      technologies: ['HTML', 'CSS'],
+      image: 'https://placehold.co/600x400/0f3460/e94560?text=Ahaouah',
+      gradient: 'linear-gradient(135deg, #0f3460 0%, #e94560 100%)',
+      repoUrl: 'https://github.com/christiandoh/Ahaouah-projret',
     },
     {
       id: 3,
-      title: 'Management Dashboard',
+      title: 'R-sum- Portfolio',
       category: 'web',
-      description: 'Designed and built a tool for teams to track their work in real-time. Shows what is done, what is pending, and who is doing what. Helps managers see the big picture without micromanaging.',
-      technologies: ['flutter', 'D3.js', 'WebSocket', 'Express'],
-      image: `${process.env.PUBLIC_URL}/managment.jpeg`,
-      gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+      description: 'Portfolio personnel au format web. Présentation et mise en avant des réalisations avec HTML.',
+      technologies: ['HTML'],
+      image: 'https://placehold.co/600x400/16213e/0f3460?text=R-sum',
+      gradient: 'linear-gradient(135deg, #16213e 0%, #0f3460 100%)',
+      repoUrl: 'https://github.com/christiandoh/R-sum-',
     },
     {
       id: 4,
-      title: 'Download Manager',
-      category: 'mobile',
-      description: 'Built an app that lets users download, organize, and manage files on the go. Handles large files, pause/resume, and organizes everything into folders.',
-      technologies: ['flutter', 'Google Maps API', 'Node.js'],
-      image: `${process.env.PUBLIC_URL}/téléchargement.jpeg`,
-      gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+      title: 'Nuage Créatif',
+      category: 'web',
+      description: 'Projet créatif avec mise en forme et styles avancés. Design et expérience utilisateur au cœur du projet.',
+      technologies: ['CSS'],
+      image: 'https://placehold.co/600x400/533483/a855f7?text=Nuage+Cr%C3%A9atif',
+      gradient: 'linear-gradient(135deg, #533483 0%, #a855f7 100%)',
+      repoUrl: 'https://github.com/christiandoh/Nuage_Creatif',
     },
     {
       id: 5,
-      title: 'Social Network',
-      category: 'fullstack',
-      description: 'Developed a platform where professionals connect and share ideas. Built messaging, notifications, and a news feed. Focused on privacy and meaningful interactions over clutter.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Socket.io'],
-      image: `${process.env.PUBLIC_URL}/socialeapp.jpeg`,
-      gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    },
-    {
-      id: 6,
-      title: 'Fintech Platform',
-      category: 'fullstack',
-      description: 'Built a financial app for managing transactions and investments. Secure, fast, and designed to make money management feel effortless. Real-time updates and clear insights into spending.',
-      technologies: ['flutter', 'Express', 'MongoDB', 'AWS S3'],
-      image: `${process.env.PUBLIC_URL}/fintechapp.jpeg`,
-      gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
+      title: 'n8n Documentation',
+      category: 'web',
+      description: 'Contribution au projet n8n : documentation de l\'outil d\'automatisation open source. Fork et participation à la doc officielle.',
+      technologies: ['HTML', 'Documentation', 'n8n'],
+      image: 'https://placehold.co/600x400/2d3748/ff6d5a?text=n8n+Docs',
+      gradient: 'linear-gradient(135deg, #2d3748 0%, #ff6d5a 100%)',
+      repoUrl: 'https://github.com/christiandoh/n8n-docs',
     },
   ];
 
@@ -166,7 +162,18 @@ const Projects = () => {
                     >
                       View Details
                     </motion.button>
-                    
+                    {project.repoUrl && (
+                      <motion.a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-btn secondary"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaGithub /> GitHub
+                      </motion.a>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -216,6 +223,17 @@ const Projects = () => {
                 <div className="project-modal-info">
                   <h3>{selectedProject.title}</h3>
                   <p>{selectedProject.description}</p>
+                  {selectedProject.repoUrl && (
+                    <a
+                      href={selectedProject.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-btn secondary"
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '15px' }}
+                    >
+                      <FaGithub /> Voir sur GitHub
+                    </a>
+                  )}
                 </div>
               </motion.div>
             </motion.div>
