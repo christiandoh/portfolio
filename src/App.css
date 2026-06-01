@@ -12,6 +12,7 @@
   --accent: #ffffff;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', ui-monospace, monospace;
 }
 
 html {
@@ -196,7 +197,6 @@ section {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  cursor: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;

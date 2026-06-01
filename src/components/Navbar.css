@@ -36,7 +36,6 @@
 }
 
 .logo span {
-  cursor: none;
 }
 
 .logo-dot {
@@ -104,7 +103,6 @@
   display: none;
   flex-direction: column;
   gap: 5px;
-  cursor: none;
   z-index: 1001;
 }
 

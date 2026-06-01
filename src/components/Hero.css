@@ -463,30 +463,6 @@
     font-size: 0.85rem;
   }
 }
-
-/* Profile Photo Styles */
-.profile-photo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.profile-photo {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 100px;
-  border: 3px solid var(--accent);
-  box-shadow: 0 10px 40px rgba(100, 200, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.profile-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 50px rgba(100, 200, 255, 0.5);
-}
-
 /* Image Modal Styles */
 .image-modal {
   position: fixed;

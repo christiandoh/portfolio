@@ -66,7 +66,7 @@ const Contact = () => {
 
   const socialLinks = [
     { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/christiandoh' },
-    { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://linkedin.com' },
+    { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://linkedin.com/in/christiandoh' },
     { name: 'WhatsApp', icon: <FaWhatsapp />, url: 'https://wa.me/2250711118582?text=Hi%20I%20would%20like%20to%20discuss%20a%20project' },
   ];
 

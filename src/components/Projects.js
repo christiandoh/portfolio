@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaTimes, FaGithub } from 'react-icons/fa';
+import { FaTimes, FaGithub, FaExternalLinkAlt, FaCode } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
@@ -58,7 +58,7 @@ const Projects = () => {
       id: 5,
       title: 'n8n Documentation',
       category: 'web',
-      description: 'Contribution au projet n8n : documentation de l\'outil d\'automatisation open source. Fork et participation à la doc officielle.',
+      description: "Contribution au projet n8n : documentation de l'outil d'automatisation open source. Fork et participation à la doc officielle.",
       technologies: ['HTML', 'Documentation', 'n8n'],
       image: 'https://placehold.co/600x400/2d3748/ff6d5a?text=n8n+Docs',
       gradient: 'linear-gradient(135deg, #2d3748 0%, #ff6d5a 100%)',
@@ -76,9 +76,9 @@ const Projects = () => {
     },
     {
       id: 7,
-      title: 'Gala des Couples',
+      title: "Gala des Couples",
       category: 'fullstack',
-      description: 'Application d\'inscription au gala (sections Couple, Cheminant, Fiancé) avec suivi des participations (20 000 XOF), statistiques et badges Soldé / Non soldé. Design rouge et or.',
+      description: "Application d'inscription au gala (sections Couple, Cheminant, Fiancé) avec suivi des participations (20 000 XOF), statistiques et badges Soldé / Non soldé. Design rouge et or.",
       technologies: ['Next.js 16', 'React 19', 'Tailwind', 'shadcn', 'Recharts'],
       image: 'https://placehold.co/600x400/8b0000/ffd700?text=Gala',
       gradient: 'linear-gradient(135deg, #8b0000 0%, #ffd700 100%)',
@@ -88,7 +88,7 @@ const Projects = () => {
       id: 8,
       title: 'MailTest',
       category: 'fullstack',
-      description: 'Plateforme de vérification automatique d\'emails et mots de passe (IMAP/SMTP), avec interface React, API Express, file de jobs BullMQ/Redis et PostgreSQL. Chiffrement des credentials.',
+      description: "Plateforme de vérification automatique d'emails et mots de passe (IMAP/SMTP), avec interface React, API Express, file de jobs BullMQ/Redis et PostgreSQL. Chiffrement des credentials.",
       technologies: ['React', 'Express', 'BullMQ', 'Redis', 'PostgreSQL', 'Docker'],
       image: 'https://placehold.co/600x400/0f3460/e94560?text=MailTest',
       gradient: 'linear-gradient(135deg, #0f3460 0%, #e94560 100%)',
@@ -108,7 +108,7 @@ const Projects = () => {
       id: 10,
       title: 'Anniversaire Bloom ATC',
       category: 'fullstack',
-      description: 'Application React + Google Apps Script pour collecter les anniversaires des Bloomers ATC, stocker dans Google Sheets & Drive, et envoyer des notifications automatiques Telegram et WhatsApp la veille à 22h30.',
+      description: "Application React + Google Apps Script pour collecter les anniversaires des Bloomers ATC, stocker dans Google Sheets & Drive, et envoyer des notifications automatiques Telegram et WhatsApp la veille à 22h30.",
       technologies: ['React', 'Vite', 'Google Apps Script', 'Telegram', 'WhatsApp'],
       image: 'https://placehold.co/600x400/0B1C2D/FFD700?text=Bloom+ATC',
       gradient: 'linear-gradient(135deg, #0B1C2D 0%, #FFD700 100%)',
@@ -118,7 +118,7 @@ const Projects = () => {
       id: 11,
       title: 'SDA — Suivi des accidents',
       category: 'mobile',
-      description: 'Application Flutter de gestion HSE (Hygiène, Sécurité, Environnement) pour SOTASERV - CI SARL : EPI, stock, incidents, export Excel. Mode hors ligne avec SQLite.',
+      description: "Application Flutter de gestion HSE (Hygiène, Sécurité, Environnement) pour SOTASERV - CI SARL : EPI, stock, incidents, export Excel. Mode hors ligne avec SQLite.",
       technologies: ['Flutter', 'Dart', 'SQLite'],
       image: 'https://placehold.co/600x400/025959/04bfad?text=SDA',
       gradient: 'linear-gradient(135deg, #025959 0%, #04bfad 100%)',
@@ -133,37 +133,49 @@ const Projects = () => {
     { id: 'fullstack', label: 'Fullstack' },
   ];
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
+  const filteredProjects = filter === 'all'
+    ? projects
     : projects.filter(project => project.category === filter);
 
   return (
     <section id="projects" className="projects" ref={ref}>
       <div className="projects-container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          My Projects
-        </motion.h2>
+        <div className="projects-header">
+          <motion.div
+            className="section-label"
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="label-bracket">{'<'}</span>
+            <span className="label-text">projects</span>
+            <span className="label-bracket">{'/>'}</span>
+          </motion.div>
 
-        <motion.p
-          className="projects-intro"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Check out a selection of my recent work
-        </motion.p>
+          <motion.h2
+            className="section-title"
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            My Projects
+          </motion.h2>
 
-        {/* Filter Buttons */}
+          <motion.p
+            className="projects-intro"
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Check out a selection of my recent work
+          </motion.p>
+        </div>
+
         <motion.div
           className="project-filters"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
           {categories.map((category) => (
             <button
@@ -171,56 +183,63 @@ const Projects = () => {
               className={`filter-btn ${filter === category.id ? 'active' : ''}`}
               onClick={() => setFilter(category.id)}
             >
-              {category.label}
+              {filter === category.id && (
+                <motion.span
+                  className="filter-indicator"
+                  layoutId="filter-indicator"
+                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                />
+              )}
+              <span className="filter-label">{category.label}</span>
             </button>
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
-        <motion.div className="projects-grid" layout>
-          <AnimatePresence>
-            {filteredProjects.map((project, index) => (
+        <motion.div
+          className="projects-grid"
+          layout
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
-                className="project-card glass"
+                className="project-card"
                 layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                transition={{ duration: 0.4, ease: 'easeOut' }}
+                whileHover={{ y: -8 }}
               >
-                <div 
+                <div
                   className="project-image"
                   style={{ background: project.gradient }}
                 >
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="project-img"
-                  />
+                  <div className="project-image-overlay" />
+                  <div className="project-image-content">
+                    <span className="project-category-tag">{project.category}</span>
+                  </div>
                 </div>
 
-                <div className="project-content">
+                <div className="project-body">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
 
-                  <div className="project-technologies">
+                  <div className="project-tech">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="tech-tag">
-                        {tech}
-                      </span>
+                      <code key={tech} className="tech-badge">{tech}</code>
                     ))}
                   </div>
 
-                  <div className="project-links">
+                  <div className="project-actions">
                     <motion.button
                       className="project-btn"
                       onClick={() => setSelectedProject(project)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
                     >
-                      View Details
+                      <FaCode className="btn-icon" />
+                      <span>Details</span>
                     </motion.button>
                     {project.repoUrl && (
                       <motion.a
@@ -228,10 +247,11 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-btn secondary"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.97 }}
                       >
-                        <FaGithub /> GitHub
+                        <FaGithub className="btn-icon" />
+                        <span>Source</span>
                       </motion.a>
                     )}
                   </div>
@@ -241,16 +261,6 @@ const Projects = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Portfolio Owner Photo */}
-        <div className="portfolio-owner">
-          <img 
-            src={`${process.env.PUBLIC_URL}/doh-lah.jpeg`}
-            alt="Portfolio Owner" 
-            className="owner-photo"
-          />
-        </div>
-
-        {/* Project Image Modal */}
         <AnimatePresence>
           {selectedProject && (
             <motion.div
@@ -258,15 +268,15 @@ const Projects = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
               onClick={() => setSelectedProject(null)}
             >
               <motion.div
                 className="project-modal-content"
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.5, opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
@@ -275,24 +285,42 @@ const Projects = () => {
                 >
                   <FaTimes />
                 </button>
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="project-modal-image"
-                />
-                <div className="project-modal-info">
-                  <h3>{selectedProject.title}</h3>
+
+                <div
+                  className="modal-image"
+                  style={{ background: selectedProject.gradient }}
+                >
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                  />
+                </div>
+
+                <div className="modal-info">
+                  <div className="modal-info-header">
+                    <span className="modal-category">{selectedProject.category}</span>
+                    <h3>{selectedProject.title}</h3>
+                  </div>
                   <p>{selectedProject.description}</p>
+                  <div className="modal-tech">
+                    {selectedProject.technologies.map((tech) => (
+                      <code key={tech} className="tech-badge">{tech}</code>
+                    ))}
+                  </div>
                   {selectedProject.repoUrl && (
-                    <a
+                    <motion.a
                       href={selectedProject.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-btn secondary"
-                      style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '15px' }}
+                      className="project-btn"
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.97 }}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '16px' }}
                     >
-                      <FaGithub /> Voir sur GitHub
-                    </a>
+                      <FaGithub />
+                      <span>View on GitHub</span>
+                      <FaExternalLinkAlt style={{ fontSize: '0.7em', opacity: 0.7 }} />
+                    </motion.a>
                   )}
                 </div>
               </motion.div>
