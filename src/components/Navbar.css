@@ -177,6 +177,12 @@
     right: auto;
   }
 
+  .navbar.scrolled .nav-menu {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-12px);
+  }
+
   .nav-link {
     font-size: 1.5rem;
     padding: 12px;

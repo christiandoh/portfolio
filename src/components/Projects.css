@@ -409,103 +409,180 @@
 
 @media (max-width: 768px) {
   .projects {
-    padding: 60px 4%;
+    padding: 50px 4%;
   }
 
   .projects-header {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
 
   .section-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: 1.6rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   .projects-intro {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .project-filters {
-    gap: 6px;
-    margin-bottom: 36px;
+    gap: 5px;
+    margin-bottom: 28px;
   }
 
   .filter-btn {
-    padding: 8px 16px;
-    font-size: 0.8rem;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .filter-indicator {
+    display: none;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 14px;
   }
 
   .project-image {
-    height: 180px;
+    height: 140px;
+  }
+
+  .project-image-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
   }
 
   .project-body {
-    padding: 16px 18px 20px;
-  }
-
-  .project-title {
-    font-size: 1.1rem;
-  }
-
-  .project-description {
-    font-size: 0.85rem;
-    -webkit-line-clamp: 2;
-  }
-
-  .project-actions {
-    flex-direction: column;
-  }
-
-  .project-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .modal-image {
-    height: 220px;
-  }
-
-  .modal-info {
-    padding: 20px 24px 24px;
-  }
-
-  .modal-info-header h3 {
-    font-size: 1.3rem;
-  }
-
-  .modal-info p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-filters {
-    gap: 4px;
-  }
-
-  .filter-btn {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-  }
-
-  .project-image {
-    height: 150px;
+    padding: 12px 14px 14px;
+    gap: 8px;
   }
 
   .project-title {
     font-size: 1rem;
   }
 
+  .project-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 1;
+    line-height: 1.4;
+  }
+
+  .project-tech {
+    gap: 4px;
+  }
+
   .tech-badge {
-    font-size: 0.7rem;
-    padding: 3px 8px;
+    font-size: 0.65rem;
+    padding: 2px 7px;
+  }
+
+  .project-actions {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .project-btn {
+    padding: 7px 12px;
+    font-size: 0.75rem;
+    justify-content: center;
+  }
+
+  .project-btn.secondary {
+    display: none;
+  }
+
+  .btn-icon {
+    font-size: 0.75rem;
   }
 
   .modal-image {
-    height: 180px;
+    height: 200px;
+  }
+
+  .modal-info {
+    padding: 16px 18px 20px;
+    gap: 10px;
+  }
+
+  .modal-info-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .modal-info p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 40px 3%;
+  }
+
+  .projects-header {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 1.3rem !important;
+  }
+
+  .project-filters {
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+
+  .filter-btn {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+
+  .project-image {
+    height: 110px;
+  }
+
+  .project-body {
+    padding: 10px 12px 12px;
+    gap: 6px;
+  }
+
+  .project-title {
+    font-size: 0.9rem;
+  }
+
+  .project-description {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 1;
+  }
+
+  .tech-badge {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+
+  .project-btn {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+
+  .modal-image {
+    height: 160px;
+  }
+
+  .modal-info {
+    padding: 14px 16px 18px;
+  }
+
+  .modal-info-header h3 {
+    font-size: 1rem;
+  }
+
+  .modal-info p {
+    font-size: 0.8rem;
   }
 }
