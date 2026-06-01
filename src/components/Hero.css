@@ -93,82 +93,11 @@
   border: 2px solid var(--accent);
 }
 
-/* Hero Visual */
 .hero-visual {
   position: relative;
-  height: 500px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-}
-
-.profile-photo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  order: 2;
-}
-
-.visual-container {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  order: 1;
-}
-
-.center-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-.floating-card {
-  position: absolute;
-  padding: 20px 30px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.card-content {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.card-icon {
-  font-size: 2rem;
-}
-
-.card-text {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.card-1 {
-  top: 15%;
-  left: 5%;
-}
-
-.card-2 {
-  top: 50%;
-  right: 5%;
-  transform: translateY(-50%);
-}
-
-.card-3 {
-  bottom: 15%;
-  left: 5%;
 }
 
 /* Scroll Indicator */
@@ -247,37 +176,6 @@
   .btn-text {
     display: inline;
   }
-
-  .hero-visual {
-    height: 350px;
-  }
-
-  .visual-container {
-    width: 300px;
-    height: 300px;
-  }
-
-  .center-circle {
-    width: 130px;
-    height: 130px;
-  }
-
-  .floating-card {
-    padding: 15px 20px;
-  }
-
-  .card-icon {
-    font-size: 1.5rem;
-  }
-
-  .card-text {
-    font-size: 1rem;
-  }
-
-  .profile-photo {
-    width: 250px;
-    height: 250px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -311,60 +209,6 @@
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 30px;
-  }
-
-  .hero-visual {
-    height: auto;
-    min-height: auto;
-    flex-direction: column-reverse;
-    gap: 20px;
-  }
-
-  .visual-container {
-    width: 220px;
-    height: 220px;
-    order: 2;
-  }
-
-  .profile-photo-container {
-    order: 1;
-    margin-bottom: 0;
-  }
-
-  .floating-card {
-    padding: 12px 15px;
-  }
-
-  .card-content {
-    flex-direction: column;
-    gap: 6px;
-    align-items: center;
-  }
-
-  .card-icon {
-    font-size: 1.3rem;
-  }
-
-  .card-text {
-    font-size: 0.75rem;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  .center-circle {
-    width: 100px;
-    height: 100px;
-  }
-
-  .profile-photo-container {
-    margin-bottom: 20px;
-  }
-
-  .profile-photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 90px;
-    border: 2px solid var(--accent);
   }
 
   .scroll-indicator {
@@ -435,80 +279,8 @@
     margin-bottom: 25px;
   }
 
-  .visual-container {
-    width: 180px;
-    height: 180px;
-  }
-
-  .floating-card {
-    padding: 10px 12px;
-  }
-
-  .card-icon {
-    font-size: 1.1rem;
-  }
-
-  .card-text {
-    font-size: 0.65rem;
-  }
-
-  .profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
-  }
-
   .btn {
     padding: 10px 16px;
     font-size: 0.85rem;
   }
-}
-/* Image Modal Styles */
-.image-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  backdrop-filter: blur(5px);
-}
-
-.modal-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-image {
-  max-width: 80vw;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 20px 60px rgba(100, 200, 255, 0.4);
-}
-
-.modal-close {
-  position: absolute;
-  top: -50px;
-  right: 0;
-  background: none;
-  border: none;
-  color: var(--accent);
-  font-size: 2.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 10px;
-}
-
-.modal-close:hover {
-  transform: scale(1.2);
-  color: #ffffff;
 }

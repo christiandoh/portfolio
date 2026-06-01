@@ -1,0 +1,176 @@
+.orbital-hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbital-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.orbital-center {
+  position: relative;
+  z-index: 2;
+  width: clamp(140px, 22vw, 220px);
+  height: clamp(140px, 22vw, 220px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 10px 40px rgba(100, 200, 255, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: auto;
+}
+
+.orbital-center:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 50px rgba(100, 200, 255, 0.5);
+}
+
+.orbital-ring {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.orbital-item {
+  position: absolute;
+  width: clamp(56px, 10vw, 100px);
+  height: clamp(56px, 10vw, 100px);
+  will-change: transform;
+  pointer-events: none;
+  backface-visibility: hidden;
+}
+
+.orbital-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Image Modal */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content .modal-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(100, 200, 255, 0.4);
+}
+
+.modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+.modal-close:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .orbital-hero {
+    height: 380px;
+  }
+
+  .orbital-stage {
+    perspective: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orbital-hero {
+    height: 320px;
+  }
+
+  .orbital-stage {
+    perspective: 800px;
+  }
+
+  .orbital-center {
+    width: clamp(100px, 35vw, 160px);
+    height: clamp(100px, 35vw, 160px);
+    border-width: 2px;
+  }
+
+  .orbital-item {
+    width: clamp(42px, 12vw, 70px);
+    height: clamp(42px, 12vw, 70px);
+  }
+
+  .orbital-item img {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orbital-hero {
+    height: 260px;
+  }
+
+  .orbital-stage {
+    perspective: 600px;
+  }
+
+  .orbital-center {
+    width: clamp(80px, 40vw, 120px);
+    height: clamp(80px, 40vw, 120px);
+  }
+
+  .orbital-item {
+    width: clamp(32px, 10vw, 50px);
+    height: clamp(32px, 10vw, 50px);
+  }
+
+  .orbital-item img {
+    border-radius: 6px;
+  }
+}

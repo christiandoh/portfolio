@@ -124,6 +124,16 @@ const Projects = () => {
       gradient: 'linear-gradient(135deg, #025959 0%, #04bfad 100%)',
       repoUrl: 'https://github.com/christiandoh/SDA',
     },
+    {
+      id: 12,
+      title: "Voix d'Ange",
+      category: 'web',
+      description: "Landing page cinématique avec orbite 3D en CSS pur : 10 images tournent autour d'un visuel central au scroll. React + TypeScript + Vite, animations mathématiques, zéro librairie externe.",
+      technologies: ['React', 'TypeScript', 'Vite', 'CSS 3D'],
+      image: 'https://placehold.co/600x400/c8f7dc/1b4332?text=Voix+d%27Ange',
+      gradient: 'linear-gradient(135deg, #7de2b8 0%, #2d6a4f 100%)',
+      repoUrl: 'https://github.com/christiandoh/VOIX_D-ANGE',
+    },
   ];
 
   const categories = [

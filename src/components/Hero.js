@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaMobileAlt, FaRocket, FaTimes, FaEnvelope, FaFolderOpen } from 'react-icons/fa';
+import { FaEnvelope, FaFolderOpen } from 'react-icons/fa';
+import { OrbitalHero } from './OrbitalHero';
 import './Hero.css';
 
 const Hero = () => {
-  const [imageEnlarged, setImageEnlarged] = useState(false);
-
   const scrollToContact = () => {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
   };
@@ -96,74 +95,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          <div className="profile-photo-container">
-            <motion.img
-              src={`${process.env.PUBLIC_URL}/doh-lah.jpeg`}
-              alt="Doh Lah Nundo Christian"
-              className="profile-photo"
-              onClick={() => setImageEnlarged(true)}
-              whileHover={{ scale: 1.05 }}
-              style={{ cursor: 'pointer' }}
-            />
-          </div>
-
-          <div className="visual-container">
-            <motion.div
-              className="floating-card card-1"
-              animate={{
-                y: [0, -20, 0],
-                rotate: [0, 5, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <div className="card-content">
-                <span className="card-icon"><FaReact /></span>
-                <span className="card-text">React</span>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              className="floating-card card-2"
-              animate={{
-                y: [0, -15, 0],
-                rotate: [0, -5, 0],
-              }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <div className="card-content">
-                <span className="card-icon"><FaMobileAlt /></span>
-                <span className="card-text">Mobile</span>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              className="floating-card card-3"
-              animate={{
-                y: [0, -25, 0],
-                rotate: [0, 8, 0],
-              }}
-              transition={{
-                duration: 4.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <div className="card-content">
-                <span className="card-icon"><FaRocket /></span>
-                <span className="card-text">Performance</span>
-              </div>
-            </motion.div>
-            
-            <div className="center-circle"></div>
-          </div>
+          <OrbitalHero centerImage={`${process.env.PUBLIC_URL}/doh-lah.jpeg`} />
         </motion.div>
       </div>
       
@@ -181,37 +113,6 @@ const Hero = () => {
           <div className="wheel"></div>
         </div>
       </motion.div>
-
-      {/* Image Modal */}
-      {imageEnlarged && (
-        <motion.div
-          className="image-modal"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={() => setImageEnlarged(false)}
-        >
-          <motion.div
-            className="modal-content"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className="modal-close"
-              onClick={() => setImageEnlarged(false)}
-            >
-              <FaTimes />
-            </button>
-            <img
-              src={`${process.env.PUBLIC_URL}/doh-lah.jpeg`}
-              alt="Doh Lah Nundo Christian - Enlarged"
-              className="modal-image"
-            />
-          </motion.div>
-        </motion.div>
-      )}
     </section>
   );
 };
